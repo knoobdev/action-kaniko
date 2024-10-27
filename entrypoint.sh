@@ -96,7 +96,7 @@ EOF
 export IFS=''
 # Removes a trailing new line
 ARGS=$(echo "${ARGS}" | sed 's/\n*$//')
-kaniko_cmd="/kaniko/executor ${ARGS} --reproducible --force"
+kaniko_cmd="/kaniko/executor ${ARGS} --force"
 echo "Running kaniko command ${kaniko_cmd}"
 eval "${kaniko_cmd}"
 
